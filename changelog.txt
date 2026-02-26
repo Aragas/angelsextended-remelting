@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 26.02.2026
+  Major Features:
+    - Updated mod for Factorio 2.0 compatibility.
+  Changes:
+    - Updated all fluid names to match Angel's Smelting 2.x naming conventions (liquid-molten-X to angels-liquid-molten-X).
+    - Updated recipe category from induction-smelting to angels-induction-smelting.
+    - Updated Bob's alloy plate names to match Bob's Plates 2.x naming conventions.
+    - Updated Clowns molten magnesium fluid name to match Clowns Processing 2.x naming conventions.
+    - Updated Alloy Mixer entity definitions for Factorio 2.0 format (fluid boxes, graphics, energy emissions, module slots).
+    - Updated entity recipe format to use explicit ingredient/result types.
+    - Aligned Alloy Mixer crafting costs with Angel's Casting Machine pattern.
+    - Fixed entity recipe load order so RB overrides apply correctly.
+    - Added upgrade chain for Alloy Mixer tiers (MK1 through MK4).
+    - Added migration file to rename fluids in existing saves.
+  Removed:
+    - Removed ShinyAngelGFX support (not ported to 2.x).
+    - Removed Better_Strand_Casting incompatibility (no longer relevant).
+    - Removed difficulty modes (normal/expensive) as Factorio 2.0 no longer supports them.
+---------------------------------------------------------------------------------------------------
 Version: 0.17.10
 Date: 29.09.2019
   Bugfixes:

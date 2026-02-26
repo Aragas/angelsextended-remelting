@@ -5,41 +5,41 @@ data:extend(
 		type = "recipe",
 		name = "alloy-mixer",
 		energy_required = 5,
-		enabled = "false",
-		ingredients ={
-			{"iron-plate", 10},
+		enabled = false,
+		ingredients = {
+			{type="item", name="iron-plate", amount=10},
 		},
-		result= "alloy-mixer",
+		results = {{type="item", name="alloy-mixer", amount=1}},
 	},
 	{
 		type = "recipe",
 		name = "alloy-mixer-2",
 		energy_required = 5,
-		enabled = "false",
-		ingredients ={
-			{"alloy-mixer", 1},
+		enabled = false,
+		ingredients = {
+			{type="item", name="alloy-mixer", amount=1},
 		},
-		result= "alloy-mixer-2",
+		results = {{type="item", name="alloy-mixer-2", amount=1}},
 	},
 	{
 		type = "recipe",
 		name = "alloy-mixer-3",
 		energy_required = 5,
-		enabled = "false",
-		ingredients ={
-			{"alloy-mixer-2", 1},
+		enabled = false,
+		ingredients = {
+			{type="item", name="alloy-mixer-2", amount=1},
 		},
-		result= "alloy-mixer-3",
+		results = {{type="item", name="alloy-mixer-3", amount=1}},
 	},
 	{
 		type = "recipe",
 		name = "alloy-mixer-4",
 		energy_required = 5,
-		enabled = "false",
-		ingredients ={
-			{"alloy-mixer-3", 1},
+		enabled = false,
+		ingredients = {
+			{type="item", name="alloy-mixer-3", amount=1},
 		},
-		result= "alloy-mixer-4",
+		results = {{type="item", name="alloy-mixer-4", amount=1}},
 	},
 }
 )

@@ -1,144 +1,65 @@
-local buildingmulti = angelsmods.marathon.buildingmulti
-local buildingtime = angelsmods.marathon.buildingtime
-
 angelsmods.functions.RB.build(
 {
 	-- Alloy Mixer
 	{
 		type = "recipe",
 		name = "alloy-mixer",
-		normal =
-		{
-			energy_required = 5,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-1", 1},
-				{"t1-plate", 3},
-				{"t0-circuit", 3},
-				{"t1-pipe", 4},
-				{"t1-gears", 2},
-				{"t1-brick", 2},
-			},
-			result="alloy-mixer",
+		energy_required = 5,
+		enabled = false,
+		ingredients = {
+			{type="item", name="alloym-1", amount=1},
+			{type="item", name="t0-plate", amount=3},
+			{type="item", name="t0-circuit", amount=1},
+			{type="item", name="t0-gears", amount=1},
+			{type="item", name="t0-brick", amount=1},
+			{type="item", name="t0-pipe", amount=2},
 		},
-		expensive =
-		{
-			energy_required = 5 * buildingtime,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-1", 1},
-				{"t1-plate", 3 * buildingmulti},
-				{"t0-circuit", 3 * buildingmulti},
-				{"t1-pipe", 4 * buildingmulti},
-				{"t1-gears", 2 * buildingmulti},
-				{"t1-brick", 2 * buildingmulti},
-			},
-			result="alloy-mixer",
-		},
+		results = {{type="item", name="alloy-mixer", amount=1}},
 	},
 	{
 		type = "recipe",
 		name = "alloy-mixer-2",
-		normal =
-		{
-			energy_required = 5,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-2", 1},
-				{"t2-plate", 3},
-				{"t2-circuit", 3},
-				{"t2-pipe", 4},
-				{"t2-gears", 2},
-				{"t2-brick", 2},
-			},
-			result="alloy-mixer-2",
+		energy_required = 5,
+		enabled = false,
+		ingredients = {
+			{type="item", name="alloym-2", amount=1},
+			{type="item", name="t1-plate", amount=3},
+			{type="item", name="t1-circuit", amount=1},
+			{type="item", name="t1-gears", amount=1},
+			{type="item", name="t1-brick", amount=1},
+			{type="item", name="t1-pipe", amount=2},
 		},
-		expensive =
-		{
-			energy_required = 5 * buildingtime,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-2", 1},
-				{"t2-plate", 3 * buildingmulti},
-				{"t2-circuit", 3 * buildingmulti},
-				{"t2-pipe", 4 * buildingmulti},
-				{"t2-gears", 2 * buildingmulti},
-				{"t2-brick", 2 * buildingmulti},
-			},
-			result="alloy-mixer-2",
-		},
+		results = {{type="item", name="alloy-mixer-2", amount=1}},
 	},
 	{
 		type = "recipe",
 		name = "alloy-mixer-3",
-		normal =
-		{
-			energy_required = 5,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-3", 1},
-				{"t3-plate", 3},
-				{"t3-circuit", 3},
-				{"t3-pipe", 4},
-				{"t3-gears", 2},
-				{"t3-brick", 2},
-			},
-			result="alloy-mixer-3",
+		energy_required = 5,
+		enabled = false,
+		ingredients = {
+			{type="item", name="alloym-3", amount=1},
+			{type="item", name="t3-plate", amount=3},
+			{type="item", name="t3-circuit", amount=1},
+			{type="item", name="t3-gears", amount=1},
+			{type="item", name="t3-brick", amount=1},
+			{type="item", name="t3-pipe", amount=2},
 		},
-		expensive =
-		{
-			energy_required = 5 * buildingtime,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-3", 1},
-				{"t3-plate", 3 * buildingmulti},
-				{"t3-circuit", 3 * buildingmulti},
-				{"t3-pipe", 4 * buildingmulti},
-				{"t3-gears", 2 * buildingmulti},
-				{"t3-brick", 2 * buildingmulti},
-			},
-			result="alloy-mixer-3",
-		},
+		results = {{type="item", name="alloy-mixer-3", amount=1}},
 	},
 	{
 		type = "recipe",
 		name = "alloy-mixer-4",
-		normal =
-		{
-			energy_required = 5,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-4", 1},
-				{"t4-plate", 3},
-				{"t4-circuit", 3},
-				{"t4-pipe", 4},
-				{"t4-gears", 2},
-				{"t4-brick", 2},
-			},
-			result="alloy-mixer-4",
+		energy_required = 5,
+		enabled = false,
+		ingredients = {
+			{type="item", name="alloym-4", amount=1},
+			{type="item", name="t4-plate", amount=3},
+			{type="item", name="t4-circuit", amount=1},
+			{type="item", name="t4-gears", amount=1},
+			{type="item", name="t4-brick", amount=1},
+			{type="item", name="t4-pipe", amount=2},
 		},
-		expensive =
-		{
-			energy_required = 5 * buildingtime,
-			enabled = false,
-			ingredients =
-			{
-				{"alloym-4", 1},
-				{"t4-plate", 3 * buildingmulti},
-				{"t4-circuit", 3 * buildingmulti},
-				{"t4-pipe", 4 * buildingmulti},
-				{"t4-gears", 2 * buildingmulti},
-				{"t4-brick", 2 * buildingmulti},
-			},
-			result="alloy-mixer-4",
-		},
+		results = {{type="item", name="alloy-mixer-4", amount=1}},
 	},
 }
 )

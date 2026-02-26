@@ -51,5 +51,4 @@ else
 	aragasmods.functions.OV.disable_technology("remelting-tier-6")
 end
 
---DYNAMIC OVERRIDES
-require("prototypes.recipes.remelting-entity-angels")
+--DYNAMIC OVERRIDES (entity-angels loaded in data-updates.lua after RB fallbacks are set)

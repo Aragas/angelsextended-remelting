@@ -10,6 +10,8 @@ require("prototypes.remelting-category")
 
 require("prototypes.buildings.alloy-mixer")
 
+require("prototypes.recipes.remelting-entity")
+
 if angelsmods and angelsmods.smelting then
     require("prototypes.recipes.angelssmelting.remelting-aluminium")
     require("prototypes.recipes.angelssmelting.remelting-chrome")
@@ -34,8 +36,6 @@ if angelsmods and angelsmods.smelting then
     require("prototypes.remelting-override-angelssmelting")
 end
 
-require("prototypes.recipes.remelting-entity")
-
 require("prototypes.technology.remelting-technology")
 
 if bobmods and bobmods.plates then
@@ -55,8 +55,4 @@ if mods["Clowns-Processing"] then
     require("prototypes.recipes.clowns.remelting-magnesium")
 
     require("prototypes.remelting-override-clowns")
-end
-
-if mods["ShinyAngelGFX"] and iconset then -- Check if iconset exist as it could be edited in the future
-    require("prototypes.remelting-override-shinygfx")
 end

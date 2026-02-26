@@ -1,0 +1,32 @@
+{
+  "item": [],
+  "entity": [],
+  "recipe": [],
+  "fluid": [
+    ["liquid-molten-iron", "angels-liquid-molten-iron"],
+    ["liquid-molten-copper", "angels-liquid-molten-copper"],
+    ["liquid-molten-tin", "angels-liquid-molten-tin"],
+    ["liquid-molten-silver", "angels-liquid-molten-silver"],
+    ["liquid-molten-lead", "angels-liquid-molten-lead"],
+    ["liquid-molten-zinc", "angels-liquid-molten-zinc"],
+    ["liquid-molten-steel", "angels-liquid-molten-steel"],
+    ["liquid-molten-solder", "angels-liquid-molten-solder"],
+    ["liquid-molten-chrome", "angels-liquid-molten-chrome"],
+    ["liquid-molten-cobalt", "angels-liquid-molten-cobalt"],
+    ["liquid-molten-manganese", "angels-liquid-molten-manganese"],
+    ["liquid-molten-nickel", "angels-liquid-molten-nickel"],
+    ["liquid-molten-silicon", "angels-liquid-molten-silicon"],
+    ["liquid-molten-glass", "angels-liquid-molten-glass"],
+    ["liquid-molten-gold", "angels-liquid-molten-gold"],
+    ["liquid-molten-titanium", "angels-liquid-molten-titanium"],
+    ["liquid-molten-platinum", "angels-liquid-molten-platinum"],
+    ["liquid-molten-aluminium", "angels-liquid-molten-aluminium"],
+    ["liquid-molten-brass", "angels-liquid-molten-brass"],
+    ["liquid-molten-bronze", "angels-liquid-molten-bronze"],
+    ["liquid-molten-gunmetal", "angels-liquid-molten-gunmetal"],
+    ["liquid-molten-invar", "angels-liquid-molten-invar"],
+    ["liquid-molten-cobalt-steel", "angels-liquid-molten-cobalt-steel"],
+    ["liquid-molten-nitinol", "angels-liquid-molten-nitinol"],
+    ["liquid-molten-magnesium", "clowns-liquid-molten-magnesium"]
+  ]
+}
