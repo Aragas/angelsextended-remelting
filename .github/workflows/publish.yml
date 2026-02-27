@@ -45,7 +45,6 @@ jobs:
             -H "Authorization: Bearer $MOD_PORTAL_API_KEY" \
             -F "mod=${{ steps.info.outputs.name }}")
 
-          echo "Init response: $INIT_RESPONSE"
           UPLOAD_URL=$(echo "$INIT_RESPONSE" | jq -r '.upload_url')
 
           if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
