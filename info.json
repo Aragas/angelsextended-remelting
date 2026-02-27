@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/justarandomgeek/vscode-factoriomod-debug/refs/heads/current/schema/modinfo.json",
   "name": "angelsextended-remelting",
   "version": "2.0.0",
   "title": "Angel's Extended - Remelting",
