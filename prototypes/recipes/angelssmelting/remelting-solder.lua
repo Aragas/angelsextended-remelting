@@ -1,113 +1,111 @@
-data:extend(
-{
-	-- Solder Plate
-	{
-		type = "recipe",
-		name = "molten-solder-remelting",
-		category = "angels-induction-smelting",
-		subgroup = "angels-solder-casting",
-		enabled = false,
-		energy_required = 6,
-		ingredients = {{type="item", name="angels-solder", amount=4}},
-		results = {{type="fluid", name="angels-liquid-molten-solder", amount=35}},
-		icons = {
-			{
-				icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
-				icon_size = 64,
-			},
-			{
-				icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
-				icon_size = 64,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.16,
-				shift = {-12, -12},
-			}
-		},
-		order = "a]",
-	},
+data:extend({
+  -- Solder Plate
+  {
+    type = "recipe",
+    name = "molten-solder-remelting",
+    category = "angels-induction-smelting",
+    subgroup = "angels-solder-casting",
+    enabled = false,
+    energy_required = 6,
+    ingredients = { { type = "item", name = "angels-solder", amount = 4 } },
+    results = { { type = "fluid", name = "angels-liquid-molten-solder", amount = 35 } },
+    icons = {
+      {
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
+        icon_size = 64,
+        tint = { r = 0.8, g = 0.8, b = 0.8, a = 0.5 },
+        scale = 0.16,
+        shift = { -12, -12 },
+      },
+    },
+    order = "a]",
+  },
 
-	-- Molten Solder
-	{
-		type = "recipe",
-		name = "molten-solder-alloy-mixing-1",
-		category = "molten-alloy-mixing",
-		subgroup = "aragas-solder-alloy-mixing",
-		enabled = false,
-		energy_required = 4,
-		ingredients = {
-			{type="fluid", name="angels-liquid-molten-tin", amount=120},
-			{type="fluid", name="angels-liquid-molten-lead", amount=120},
-		},
-		results = {{type="fluid", name="angels-liquid-molten-solder", amount=240}},
-		icons = {
-			{
-				icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
-				icon_size = 64,
-			},
-			{
-				icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
-				icon_size = 64,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.16,
-				shift = {-12, -12},
-			}
-		},
-		order = "aa",
-	},
-	{
-		type = "recipe",
-		name = "molten-solder-alloy-mixing-2",
-		category = "molten-alloy-mixing-2",
-		subgroup = "aragas-solder-alloy-mixing",
-		enabled = false,
-		energy_required = 4,
-		ingredients = {
-			{type="fluid", name="angels-liquid-molten-tin", amount=120},
-			{type="fluid", name="angels-liquid-molten-zinc", amount=120},
-		},
-		results = {{type="fluid", name="angels-liquid-molten-solder", amount=240}},
-		icons = {
-			{
-				icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
-				icon_size = 64,
-			},
-			{
-				icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
-				icon_size = 64,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.16,
-				shift = {-12, -12},
-			}
-		},
-		order = "ab",
-	},
-	{
-		type = "recipe",
-		name = "molten-solder-alloy-mixing-3",
-		category = "molten-alloy-mixing-3",
-		subgroup = "aragas-solder-alloy-mixing",
-		enabled = false,
-		energy_required = 4,
-		ingredients = {
-			{type="fluid", name="angels-liquid-molten-tin", amount=120},
-			{type="fluid", name="angels-liquid-molten-copper", amount=120},
-			{type="fluid", name="angels-liquid-molten-silver", amount=120},
-		},
-		results = {{type="fluid", name="angels-liquid-molten-solder", amount=360}},
-		icons = {
-			{
-				icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
-				icon_size = 64,
-			},
-			{
-				icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
-				icon_size = 64,
-				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.16,
-				shift = {-12, -12},
-			}
-		},
-		order = "ac",
-	},
-}
-)
+  -- Molten Solder
+  {
+    type = "recipe",
+    name = "molten-solder-alloy-mixing-1",
+    category = "molten-alloy-mixing",
+    subgroup = "aragas-solder-alloy-mixing",
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-lead", amount = 120 },
+    },
+    results = { { type = "fluid", name = "angels-liquid-molten-solder", amount = 240 } },
+    icons = {
+      {
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
+        icon_size = 64,
+        tint = { r = 0.8, g = 0.8, b = 0.8, a = 0.5 },
+        scale = 0.16,
+        shift = { -12, -12 },
+      },
+    },
+    order = "aa",
+  },
+  {
+    type = "recipe",
+    name = "molten-solder-alloy-mixing-2",
+    category = "molten-alloy-mixing-2",
+    subgroup = "aragas-solder-alloy-mixing",
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-zinc", amount = 120 },
+    },
+    results = { { type = "fluid", name = "angels-liquid-molten-solder", amount = 240 } },
+    icons = {
+      {
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
+        icon_size = 64,
+        tint = { r = 0.8, g = 0.8, b = 0.8, a = 0.5 },
+        scale = 0.16,
+        shift = { -12, -12 },
+      },
+    },
+    order = "ab",
+  },
+  {
+    type = "recipe",
+    name = "molten-solder-alloy-mixing-3",
+    category = "molten-alloy-mixing-3",
+    subgroup = "aragas-solder-alloy-mixing",
+    enabled = false,
+    energy_required = 4,
+    ingredients = {
+      { type = "fluid", name = "angels-liquid-molten-tin", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-copper", amount = 120 },
+      { type = "fluid", name = "angels-liquid-molten-silver", amount = 120 },
+    },
+    results = { { type = "fluid", name = "angels-liquid-molten-solder", amount = 360 } },
+    icons = {
+      {
+        icon = "__angelssmeltinggraphics__/graphics/icons/molten-solder.png",
+        icon_size = 64,
+      },
+      {
+        icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
+        icon_size = 64,
+        tint = { r = 0.8, g = 0.8, b = 0.8, a = 0.5 },
+        scale = 0.16,
+        shift = { -12, -12 },
+      },
+    },
+    order = "ac",
+  },
+})
