@@ -40,26 +40,30 @@ jobs:
         env:
           MOD_PORTAL_API_KEY: ${{ secrets.MOD_PORTAL_API_KEY }}
         run: |
-          INIT_RESPONSE=$(curl -s -X POST \
+          INIT_RESPONSE=$(curl -sS --retry 3 --retry-delay 5 -X POST \
             "https://mods.factorio.com/api/v2/mods/releases/init_upload" \
             -H "Authorization: Bearer $MOD_PORTAL_API_KEY" \
-            -d "mod=${{ steps.info.outputs.name }}")
+            -F "mod=${{ steps.info.outputs.name }}")
 
+          echo "Init response: $INIT_RESPONSE"
           UPLOAD_URL=$(echo "$INIT_RESPONSE" | jq -r '.upload_url')
 
           if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
-            echo "Failed to get upload URL: $INIT_RESPONSE"
+            echo "Failed to get upload URL"
+            echo "Error: $(echo "$INIT_RESPONSE" | jq -r '.message // .error // empty')"
             exit 1
           fi
 
-          UPLOAD_RESPONSE=$(curl -s -X POST \
+          UPLOAD_RESPONSE=$(curl -sS --retry 3 --retry-delay 5 -X POST \
             "https://mods.factorio.com$UPLOAD_URL" \
             -F "file=@${{ steps.info.outputs.zip_name }}")
 
+          echo "Upload response: $UPLOAD_RESPONSE"
           SUCCESS=$(echo "$UPLOAD_RESPONSE" | jq -r '.success')
 
           if [ "$SUCCESS" != "true" ]; then
-            echo "Upload failed: $UPLOAD_RESPONSE"
+            echo "Upload failed"
+            echo "Error: $(echo "$UPLOAD_RESPONSE" | jq -r '.message // .error // empty')"
             exit 1
           fi
 
