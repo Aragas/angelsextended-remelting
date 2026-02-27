@@ -55,7 +55,7 @@ jobs:
           fi
 
           UPLOAD_RESPONSE=$(curl -sS --retry 3 --retry-delay 5 -X POST \
-            "https://mods.factorio.com$UPLOAD_URL" \
+            "$UPLOAD_URL" \
             -F "file=@${{ steps.info.outputs.zip_name }}")
 
           echo "Upload response: $UPLOAD_RESPONSE"
