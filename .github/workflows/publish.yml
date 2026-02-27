@@ -33,11 +33,10 @@ jobs:
         run: |
           MOD_DIR="${{ steps.info.outputs.name }}_${{ steps.info.outputs.version }}"
           mkdir -p "$MOD_DIR"
-          cp -r changelog.txt data.lua data-updates.lua data-final-fixes.lua graphics info.json locale migrations prototypes settings.lua thumbnail.png LICENSE "$MOD_DIR/"
+          cp -r changelog.txt data.lua data-updates.lua data-final-fixes.lua graphics info.json locale migrations prototypes settings.lua thumbnail.png LICENSE README.md "$MOD_DIR/"
           zip -r "${{ steps.info.outputs.zip_name }}" "$MOD_DIR"
 
       - name: Upload to mod portal
-        if: false # Temporarily disabled to avoid accidental uploads during testing
         env:
           MOD_PORTAL_API_KEY: ${{ secrets.MOD_PORTAL_API_KEY }}
         run: |
