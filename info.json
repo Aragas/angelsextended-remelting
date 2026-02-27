@@ -1,15 +1,17 @@
 {
+  "$schema": "https://raw.githubusercontent.com/justarandomgeek/vscode-factoriomod-debug/refs/heads/current/schema/modinfo.json",
   "name": "angelsextended-remelting",
   "version": "2.0.0",
   "title": "Angel's Extended - Remelting",
   "author": "Aragas",
-  "contact": "personal@aragas.org",
+  "contact": "https://github.com/Aragas/angelsextended-remelting/issues",
   "homepage": "https://github.com/Aragas/angelsextended-remelting",
   "factorio_version": "2.0",
-  "description": "An extension to Angel's Smelting. Adds Alloy Mixer that is used to mix molten metals into alloys directly and adds the ability to remelt metal into molten liquids. Supports Bob's Mods and MadClown01's Processing.",
+  "description": "Extends Angel's Smelting with plate-to-molten remelting recipes and a tiered Alloy Mixer for mixing molten metals into alloys directly. Supports Bob's Mods, MadClown01's Processing, and SeaBlock.",
   "dependencies": [
     "angelssmelting >= 2.0.0",
     "? bobplates >= 2.0.0",
-    "? Clowns-Processing >= 2.0.0"
+    "? Clowns-Processing >= 2.0.0",
+    "(?) SeaBlock"
   ]
 }

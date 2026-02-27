@@ -4,6 +4,7 @@ Date: 26.02.2026
   Major Features:
     - Updated mod for Factorio 2.0 compatibility.
   Changes:
+    - Upgraded all icons to 64x64 resolution (from 32x32) to match Factorio 2.x standard. Credit: Medved2k.
     - Updated all fluid names to match Angel's Smelting 2.x naming conventions (liquid-molten-X to angels-liquid-molten-X).
     - Updated recipe category from induction-smelting to angels-induction-smelting.
     - Updated Bob's alloy plate names to match Bob's Plates 2.x naming conventions.
@@ -14,6 +15,16 @@ Date: 26.02.2026
     - Fixed entity recipe load order so RB overrides apply correctly.
     - Added upgrade chain for Alloy Mixer tiers (MK1 through MK4).
     - Added migration file to rename fluids in existing saves.
+  Features:
+    - Added 4 iron alloy mixing recipes (manganese, silicon, cobalt-nickel, chrome-nickel).
+    - Added 2 steel alloy mixing recipes (silicon, manganese).
+    - Alloy Mixer technologies now also unlock base alloy mixing recipes.
+    - Added tiered alloy mixing categories matching Angel's convention (higher-tier Alloy Mixers unlock more recipes).
+  Bugfixes:
+    - Fixed Alloy Mixer animation shaking caused by 1-2px frame misalignment in sprite sheet.
+    - Changed remelting recipe unlocks from smelting to casting technologies where applicable.
+    - Added SeaBlock compatibility guard for gunmetal recipes.
+    - Unhide molten chrome, manganese, and cobalt fluids that Angel's Smelting hides when plate triggers are disabled, enabling alloy mixing recipes that use them.
   Removed:
     - Removed ShinyAngelGFX support (not ported to 2.x).
     - Removed Better_Strand_Casting incompatibility (no longer relevant).

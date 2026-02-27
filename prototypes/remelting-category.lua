@@ -5,6 +5,18 @@ data:extend(
 		name = "molten-alloy-mixing",
 	},
 	{
+		type = "recipe-category",
+		name = "molten-alloy-mixing-2",
+	},
+	{
+		type = "recipe-category",
+		name = "molten-alloy-mixing-3",
+	},
+	{
+		type = "recipe-category",
+		name = "molten-alloy-mixing-4",
+	},
+	{
 		type = "item-subgroup",
 		name = "aragas-molten-alloy-mixer",
 		group = "angels-casting",
@@ -22,6 +34,12 @@ data:extend(
 		name = "aragas-steel-alloy-mixing",
 		group = "angels-casting",
 		order = "ba",
+	},
+	{
+		type = "item-subgroup",
+		name = "aragas-iron-alloy-mixing",
+		group = "angels-casting",
+		order = "ca",
 	},
 }
 )

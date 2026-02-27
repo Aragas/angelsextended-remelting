@@ -4,45 +4,56 @@ OV.add_unlock("angels-solder-smelting-1", "molten-solder-alloy-mixing-1")
 OV.add_unlock("angels-solder-smelting-2", "molten-solder-alloy-mixing-2")
 OV.add_unlock("angels-solder-smelting-3", "molten-solder-alloy-mixing-3")
 
+-- Also unlock base alloy mixing recipes via alloy mixer techs
+OV.add_unlock("remelting-alloy-mixer-1", "molten-solder-alloy-mixing-1")
+OV.add_unlock("remelting-alloy-mixer-1", "molten-steel-alloy-mixing")
+
 OV.add_unlock("angels-steel-smelting-1", "molten-steel-alloy-mixing")
+OV.add_unlock("angels-steel-smelting-2", "molten-steel-silicon-alloy-mixing")
+OV.add_unlock("angels-steel-smelting-2", "molten-steel-manganese-alloy-mixing")
+
+OV.add_unlock("remelting-alloy-mixer-1", "molten-manganese-iron-alloy-mixing")
+OV.add_unlock("angels-iron-casting-2", "molten-silicon-iron-alloy-mixing")
+OV.add_unlock("angels-iron-casting-3", "molten-coni-iron-alloy-mixing")
+OV.add_unlock("angels-iron-casting-4", "molten-crni-iron-alloy-mixing")
 
 if settings.startup["remelting-smooth-integration"].value then
 	--ALUMINIUM
-	OV.add_unlock("angels-aluminium-smelting-2", "molten-aluminium-remelting")
+	OV.add_unlock("angels-aluminium-casting-2", "molten-aluminium-remelting")
 	--CHROME
-	OV.add_unlock("angels-chrome-smelting-2", "molten-chrome-remelting")
+	OV.add_unlock("angels-chrome-casting-2", "molten-chrome-remelting")
 	--COBALT
-	OV.add_unlock("angels-cobalt-smelting-2", "molten-cobalt-remelting")
+	OV.add_unlock("angels-cobalt-casting-2", "molten-cobalt-remelting")
 	--COPPER
-	OV.add_unlock("angels-copper-smelting-2", "molten-copper-remelting")
-	--GLASS
+	OV.add_unlock("angels-copper-casting-2", "molten-copper-remelting")
+	--GLASS (no casting tech, stays on smelting)
 	OV.add_unlock("angels-glass-smelting-2", "molten-glass-remelting")
 	--GOLD
-	OV.add_unlock("angels-gold-smelting-2", "molten-gold-remelting")
+	OV.add_unlock("angels-gold-casting-2", "molten-gold-remelting")
 	--IRON
-	OV.add_unlock("angels-iron-smelting-2", "molten-iron-remelting")
+	OV.add_unlock("angels-iron-casting-2", "molten-iron-remelting")
 	--LEAD
-	OV.add_unlock("angels-lead-smelting-2", "molten-lead-remelting")
+	OV.add_unlock("angels-lead-casting-2", "molten-lead-remelting")
 	--MANGANESE
-	OV.add_unlock("angels-manganese-smelting-2", "molten-manganese-remelting")
+	OV.add_unlock("angels-manganese-casting-2", "molten-manganese-remelting")
 	--NICKEL
-	OV.add_unlock("angels-nickel-smelting-2", "molten-nickel-remelting")
+	OV.add_unlock("angels-nickel-casting-2", "molten-nickel-remelting")
 	--PLATINUM
-	OV.add_unlock("angels-platinum-smelting-2", "molten-platinum-remelting")
+	OV.add_unlock("angels-platinum-casting-2", "molten-platinum-remelting")
 	--SILICON
-	OV.add_unlock("angels-silicon-smelting-2", "molten-silicon-remelting")
+	OV.add_unlock("angels-silicon-casting-2", "molten-silicon-remelting")
 	--SILVER
-	OV.add_unlock("angels-silver-smelting-2", "molten-silver-remelting")
-	--SOLDER
+	OV.add_unlock("angels-silver-casting-2", "molten-silver-remelting")
+	--SOLDER (no casting tech, stays on smelting)
 	OV.add_unlock("angels-solder-smelting-2", "molten-solder-remelting")
-	--STEEL
+	--STEEL (no casting tech, stays on smelting)
 	OV.add_unlock("angels-steel-smelting-2", "molten-steel-remelting")
 	--TIN
-	OV.add_unlock("angels-tin-smelting-2", "molten-tin-remelting")
+	OV.add_unlock("angels-tin-casting-2", "molten-tin-remelting")
 	--TITANIUM
-	OV.add_unlock("angels-titanium-smelting-2", "molten-titanium-remelting")
+	OV.add_unlock("angels-titanium-casting-2", "molten-titanium-remelting")
 	--ZINC
-	OV.add_unlock("angels-zinc-smelting-2", "molten-zinc-remelting")
+	OV.add_unlock("angels-zinc-casting-2", "molten-zinc-remelting")
 else
 	require("prototypes.technology.remelting-technology-optional")
 

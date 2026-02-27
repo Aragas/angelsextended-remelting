@@ -17,9 +17,9 @@ data:extend(
 			},
 			{
 				icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
-				icon_size = 32,
+				icon_size = 64,
 				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
+				scale = 0.16,
 				shift = {-12, -12},
 			}
 		},
@@ -30,7 +30,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "molten-nitinol-alloy-mixing-1",
-		category = "molten-alloy-mixing",
+		category = "molten-alloy-mixing-4",
 		subgroup = "aragas-nitinol-alloy-mixing",
 		enabled = false,
 		energy_required = 4,
@@ -46,9 +46,9 @@ data:extend(
 			},
 			{
 				icon = "__angelsextended-remelting__/graphics/icons/remelting.png",
-				icon_size = 32,
+				icon_size = 64,
 				tint = {r = 0.8, g = 0.8, b = 0.8, a = 0.5},
-				scale = 0.32,
+				scale = 0.16,
 				shift = {-12, -12},
 			}
 		},

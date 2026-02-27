@@ -44,7 +44,9 @@ if bobmods and bobmods.plates then
     require("prototypes.recipes.bobplates.remelting-brass")
     require("prototypes.recipes.bobplates.remelting-bronze")
     require("prototypes.recipes.bobplates.remelting-cobalt-steel")
-    require("prototypes.recipes.bobplates.remelting-gunmetal")
+    if not mods["SeaBlock"] then
+        require("prototypes.recipes.bobplates.remelting-gunmetal")
+    end
     require("prototypes.recipes.bobplates.remelting-invar")
     require("prototypes.recipes.bobplates.remelting-nitinol")
 

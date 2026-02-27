@@ -1,13 +1,29 @@
 # Angel's Extended - Remelting
-## Little Molten Metal overhaul.
-It's now viable to set up your logistic network using only pipes with molten metals instead of plates. Alloy Mixer can create alloys using molten metals instead of ingots, the rest can be handled by Casting Machine and Strand Casting Machine.
-And if you have an excess of metal plates, just remelt them back!
 
-## Options:
-* Smooth Angel's Smelting Integration
-_Use Angel's Smelting technologies for remelting discovery instead of using external technologies based on Metallurgy._
-When enabled, if a metal has ``Advanced %METAL% Smelting 2`` technology, it will be unlocked by it. If not, it will be unlocked by ``Advanced %METAL% Smelting 1``.
-When disabled, it will offer ``Advanced Metal Remelting X`` technologies for unlocking plate remelting.  
-   
-   
-All images used are used as placeholders and belong to [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting) and [ShinyAngelGFX](https://mods.factorio.com/mod/ShinyAngelGFX) mods. The license is [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+An extension to [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting) for Factorio 2.0.
+
+## Features
+
+### Remelting
+Remelt metal plates back into molten liquids. Useful for recycling excess plates or building a pipe-based logistics network using molten metals instead of solid plates.
+
+### Alloy Mixer
+A 4-tier assembling machine that mixes molten metals into alloys directly, bypassing the ingot stage. Higher-tier Alloy Mixers unlock access to more advanced alloy recipes.
+
+### Alloy Mixing Recipes
+- **Iron alloys**: manganese, silicon, cobalt-nickel, chrome-nickel
+- **Steel alloys**: silicon, manganese
+- **Solder, Bronze, Brass**: 3 tiers each
+- **With Bob's Mods**: cobalt-steel, nitinol, gunmetal, invar
+
+## Compatibility
+- [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting) (required)
+- [Bob's Plates](https://mods.factorio.com/mod/bobplates) (optional)
+- [MadClown01's Processing](https://mods.factorio.com/mod/Clowns-Processing) (optional)
+- SeaBlock compatible
+
+## Settings
+- **Smooth Angel's Smelting Integration** (default: enabled) - Use Angel's Smelting technologies for remelting discovery instead of separate Metallurgy-based technologies.
+
+## Credits
+Entity and icon graphics are placeholders from [Angel's Smelting](https://mods.factorio.com/mod/angelssmelting), licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).

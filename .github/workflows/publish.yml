@@ -1,0 +1,76 @@
+name: Publish to Factorio Mod Portal
+
+on:
+  push:
+    tags:
+      - "[0-9]*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read mod info
+        id: info
+        run: |
+          NAME=$(jq -r '.name' info.json)
+          VERSION=$(jq -r '.version' info.json)
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "zip_name=${NAME}_${VERSION}.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Validate tag matches version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME}"
+          if [ "$TAG_VERSION" != "${{ steps.info.outputs.version }}" ]; then
+            echo "Tag version ($TAG_VERSION) does not match info.json version (${{ steps.info.outputs.version }})"
+            exit 1
+          fi
+
+      - name: Package mod
+        run: |
+          MOD_DIR="${{ steps.info.outputs.name }}_${{ steps.info.outputs.version }}"
+          mkdir -p "$MOD_DIR"
+          cp -r changelog.txt data.lua data-updates.lua data-final-fixes.lua graphics info.json locale migrations prototypes settings.lua thumbnail.png LICENSE "$MOD_DIR/"
+          zip -r "${{ steps.info.outputs.zip_name }}" "$MOD_DIR"
+
+      - name: Upload to mod portal
+        if: false # Temporarily disabled to avoid accidental uploads during testing
+        env:
+          MOD_PORTAL_API_KEY: ${{ secrets.MOD_PORTAL_API_KEY }}
+        run: |
+          INIT_RESPONSE=$(curl -s -X POST \
+            "https://mods.factorio.com/api/v2/mods/releases/init_upload" \
+            -H "Authorization: Bearer $MOD_PORTAL_API_KEY" \
+            -d "mod=${{ steps.info.outputs.name }}")
+
+          UPLOAD_URL=$(echo "$INIT_RESPONSE" | jq -r '.upload_url')
+
+          if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
+            echo "Failed to get upload URL: $INIT_RESPONSE"
+            exit 1
+          fi
+
+          UPLOAD_RESPONSE=$(curl -s -X POST \
+            "https://mods.factorio.com$UPLOAD_URL" \
+            -F "file=@${{ steps.info.outputs.zip_name }}")
+
+          SUCCESS=$(echo "$UPLOAD_RESPONSE" | jq -r '.success')
+
+          if [ "$SUCCESS" != "true" ]; then
+            echo "Upload failed: $UPLOAD_RESPONSE"
+            exit 1
+          fi
+
+          echo "Mod published successfully!"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            "${{ steps.info.outputs.zip_name }}" \
+            --title "${{ steps.info.outputs.name }} ${{ steps.info.outputs.version }}" \
+            --generate-notes
