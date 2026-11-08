@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-solder-remelting",
-    category = "angels-induction-smelting",
+    categories = {"angels-induction-smelting"},
     subgroup = "angels-solder-casting",
     enabled = false,
     energy_required = 6,
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-solder-alloy-mixing-1",
-    category = "molten-alloy-mixing",
+    categories =  {"molten-alloy-mixing"},
     subgroup = "aragas-solder-alloy-mixing",
     enabled = false,
     energy_required = 4,
@@ -56,7 +56,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-solder-alloy-mixing-2",
-    category = "molten-alloy-mixing-2",
+    categories =  {"molten-alloy-mixing-2"},
     subgroup = "aragas-solder-alloy-mixing",
     enabled = false,
     energy_required = 4,
@@ -83,7 +83,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-solder-alloy-mixing-3",
-    category = "molten-alloy-mixing-3",
+    categories =  {"molten-alloy-mixing-3"},
     subgroup = "aragas-solder-alloy-mixing",
     enabled = false,
     energy_required = 4,

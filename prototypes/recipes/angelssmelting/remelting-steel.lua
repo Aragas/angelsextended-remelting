@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-steel-remelting",
-    category = "angels-induction-smelting",
+    categories = {"angels-induction-smelting"},
     subgroup = "angels-steel-casting",
     enabled = false,
     energy_required = 6,
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-steel-alloy-mixing",
-    category = "molten-alloy-mixing",
+    categories = {"molten-alloy-mixing"},
     subgroup = "aragas-steel-alloy-mixing",
     enabled = false,
     energy_required = 4,
@@ -57,7 +57,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-steel-silicon-alloy-mixing",
-    category = "molten-alloy-mixing-2",
+    categories = {"molten-alloy-mixing-2"},
     subgroup = "aragas-steel-alloy-mixing",
     enabled = false,
     energy_required = 4,
@@ -85,7 +85,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-steel-manganese-alloy-mixing",
-    category = "molten-alloy-mixing-2",
+    categories = {"molten-alloy-mixing-2"},
     subgroup = "aragas-steel-alloy-mixing",
     enabled = false,
     energy_required = 4,

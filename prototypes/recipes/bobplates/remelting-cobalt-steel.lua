@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-cobalt-steel-remelting",
-    category = "angels-induction-smelting",
+    categories = {"angels-induction-smelting"},
     subgroup = "angels-alloys-casting",
     enabled = false,
     energy_required = 6,
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-cobalt-steel-alloy-mixing-1",
-    category = "molten-alloy-mixing-2",
+    categories = {"molten-alloy-mixing-2"},
     subgroup = "aragas-cobalt-steel-alloy-mixing",
     enabled = false,
     energy_required = 4,
