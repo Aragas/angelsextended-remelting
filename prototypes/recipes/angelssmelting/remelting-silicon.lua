@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-silicon-remelting",
-    category = "angels-induction-smelting",
+    categories = {"angels-induction-smelting"},
     subgroup = "angels-silicon-casting",
     enabled = false,
     energy_required = 6,

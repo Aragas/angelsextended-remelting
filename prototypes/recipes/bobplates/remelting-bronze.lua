@@ -3,7 +3,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-bronze-remelting",
-    category = "angels-induction-smelting",
+    categories = {"angels-induction-smelting"},
     subgroup = "angels-alloys-casting",
     enabled = false,
     energy_required = 6,
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-bronze-alloy-mixing-1",
-    category = "molten-alloy-mixing",
+    categories = {"molten-alloy-mixing"},
     subgroup = "aragas-bronze-alloy-mixing",
     enabled = false,
     energy_required = 4,
@@ -56,7 +56,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-bronze-alloy-mixing-2",
-    category = "molten-alloy-mixing-2",
+    categories = {"molten-alloy-mixing-2"},
     subgroup = "aragas-bronze-alloy-mixing",
     enabled = false,
     energy_required = 4,
@@ -84,7 +84,7 @@ data:extend({
   {
     type = "recipe",
     name = "molten-bronze-alloy-mixing-3",
-    category = "molten-alloy-mixing-3",
+    categories = {"molten-alloy-mixing-3"},
     subgroup = "aragas-bronze-alloy-mixing",
     enabled = false,
     energy_required = 4,
